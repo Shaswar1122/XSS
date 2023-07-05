@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical hacking report</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">XSS</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stored.html">Stored</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+            <li><a href="#" class="active">Blind</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon" >
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Blind </h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Cross site scripting - blind</h2>
+        <p>Blind XSS is a persistent type of cross site scripting, where the attacker will blindly deploy malicious payloads onto a vulnerable web page that does not properly sanitise user input, 
+            through a user input field, such as a search box, that will then be stored and saved to a database (a persistent state). <br><br>
+            What happens next is the crucial part. At this stage, the attacker has no idea where abouts the payload is, when the payload will be executed, or even if the payload will be executed. So, 
+            the waiting game begins. The attacker must wait for a victim to trigger the attack; the victims’ browser will remove the payload out of storage, and render it onto a web page, and this is all done by an unsuspecting user. <br><br>
+            Once this attack is in action, it can be used to steal sensitive information from unsuspecting users such as: passwords, login credentials, and credit card details. <br><br>
+            The most identifiable difference in blind XSS attacks is that the attacker is essentially ‘blind’ when conducting this attack. They don't know if their attack will be executed in a day’s time or a month’s time, in some cases the payload may not ever be executed.
+             For the attack to succeed, the attacker must ensure they have enough payloads deployed, the attacker must also ensure they implement something for the call backs that they may receive from the payloads they previously deployed. <br><br> 
+             <br><br></p>
+             <h2>Examples of Blind XSS:</h2>
+                <p>•	Third – party integrations: attackers can inject malicious code integrations such as plugins, which will be executed by the website, when the integration is loaded. <br><br>
+                    •	Malicious file uploads: attackers can upload malicious files to a website, which are then executed by users who download/ access the malicious files. <br><br></p2>
+                    <h2>Solutions:</h2>
+
+
+                    <div class="box-container">
+                        <div class="box">
+                          <h2>solution 1</h2>
+                          <p> •   The first one can be validating and sanitising all user input, this
+                            includes data that is entered through user input fields, because as we have
+                            learnt previously it is through user input fields that attackers deploy malicious payloads. <br><br></p>
+                        </div>
+                        <div class="box">
+                          <h2>solution 2</h2>
+                          <p>•   One way a user can protect themselves is by being cautious when it comes to which web
+                            applications they are visiting and if they are secure or not. <br><br></p>
+                        </div>
+                        <div class="box">
+                          <h2>solution 3</h2>
+                          <p>  •  Users should also make a note to always keep their browser software
+                            up to date with any of the latest security patches. <br><br></p>
+                        </div>
+                      </div>
+    </div>
+
+    <footer>
+        <h2>Citations</h2>
+        <br>
+        <p>Blind cross-site scripting: Learn appsec (2023) Invicti. Available at: https://www.invicti.com/learn/blind-cross-site-scripting/ (Accessed: 15 March 2023).</p>
+        <br>
+        <p>Singh, E. (2019) Introduction to blind XSS, Medium. Available at: https://r0x4r.medium.com/introduction-to-blind-xss-417dcf9c842c (Accessed: 20 March 2023).</p>
+    </footer>
+      
+
+    <script src="script.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical hacking report</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">XSS</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="stored.html">Stored</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+            <li><a href="blind.html">Blind</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon" >
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">XSS </h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>What is a vulnerability?</h2>
+        <p>Before we delve into the explanation of cross site scripting, let’s take a look at 
+            vulnerabilities and what they actually are. <br><br>
+            A vulnerability is a weakness that attackers can use to exploit and gain unauthorised 
+            entry into a computer system. Picture a house with high security locks on all doors and 
+            windows, all the windows and doors are locked shut, except the front door; this essentially 
+            allows anyone access into the property whether they are welcome or not. They can roam around 
+            the house, take whatever they want and change whatever they want, this concept is similar to 
+            a vulnerability and a computer system. <br><br>
+            Often times computer systems are extremely secure, but there is always a vulnerability or two hidden 
+            that allows attackers entry into the system, whether they are welcome or not, again, these attackers 
+            can take whatever they want and change whatever they want. <br><br>
+            A few vulnerabilities to name are cross site scripting, injection, ransomware, broken access control 
+            and so many more. <br><br></p>
+            <h2>Cross Site Scripting</h2>
+            <p>Now let’s take a look at cross site scripting, what exactly is it? <br><br>
+                Cross site scripting (XSS) is a web security vulnerability, whereby malicious client-side scripts are 
+                injected into trusted websites and are then executed by an unsuspecting end user. <br><br>
+                The reason as to why XSS attacks can be initiated or executed is because the end browser has no method 
+                in place to detect malicious or untrusted scripts. This means once an attacker injects malicious scripts 
+                into a trusted website, it will execute them scripts assuming they are from a trusted source. Once this 
+                attack is in place the malicious scripts can be used to access cookies, session tokens, sensitive data, 
+                redirect users to malicious websites, and so much more. <br><br>
+                There are many types of cross site scripting attacks a few to name are: <br><br>
+                •	DOM based <br><br>
+                •	Stored <br><br>
+                •	Blind <br><br>
+                To know more about these vulnerabilities, take a look around this website. </p>
+
+
+
+
+
+    </div>
+
+    <footer>
+        <h2>Citations</h2>
+        <br>
+        <p>Free vector: Mountains cleft view from bottom, night scenery landscape with high rocks and full moon with Stars glowing over peaks (2021) Freepik. Available at: https://www.freepik.com/free-vector/mountains-cleft-view-from-bottom-night-scenery-landscape-with-high-rocks-full-moon-with-stars-glowing-peaks_13194970.htm (Accessed: 20 April 2023).</p>
+        <br>
+        <p>Understanding vulnerabilities (no date) NCSC. Available at: https://www.ncsc.gov.uk/information/understanding-vulnerabilities (Accessed: 27 March 2023).</p>
+        <br>
+        <p>Cross site scripting (XSS) (no date) Cross Site Scripting (XSS) | OWASP Foundation. Available at: https://owasp.org/www-community/attacks/xss/ (Accessed: 15 March 2023). </p>
+        <br>
+        <p>What is Cross site scripting (XSS) ? (2022) GeeksforGeeks. Available at: https://www.geeksforgeeks.org/what-is-cross-site-scripting-xss/ (Accessed: 21 March 2023).</p>
+        <br>
+        <p>(No date) Aptive. Available at: https://www.aptive.co.uk/blog/xss-cross-site-scripting/ (Accessed: 19 April 2023). </p>
+    </footer>
+
+    <script src="script.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical hacking report</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">XSS</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Stored</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+            <li><a href="blind.html">Blind</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon" >
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Stored </h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Cross site scripting - Stored</h2>
+        <p>Stored cross-site scripting (XSS) is a type of web security attack that can lead to devastating consequences. Stored XSS occurs when an attacker uses malicious scripts which are inserted into a web application or website. This malicious script is stored on the web server and is executed on any user that accesses the affected web page. <br><br>
+            Stored XSS can lead to severe consequences for both the affected user and the web application, with data theft being the main consequence of stored XSS. The scripts can be used to steal data such as login credentials, personal information, or financial details. Web applications can also be affected by the malicious scripts which can lead to website defacement. This could be in the form of content being modified or redirecting users to a fake website. Overall, the consequences would lead to the website/applications reputation being damaged as users may lose trust in the platforms security and may face legal consequences such as fines or lawsuits due to data breaches. <br><br></p>
+             <h2>Examples of Stored XSS:</h2>
+                <p>•	Exploiting user input field: attackers can inject malicious scripts into search boxes and comment fields which the web application then stores on the server once the request is sent.  <br><br>
+                    •	Exploiting vulnerabilities in the server side: web apps store user data in a database without a proper level of sanitisation, hackers can inject stored XSS scripts.  <br><br></p2>
+                    <h2>Solutions:</h2>
+
+                    <div class="box-container">
+                        <div class="box">
+                          <h2>solution 1</h2>
+                          <p> •   sanitize user input by validating and filtering out any unusual characters to remove any malicious code. <br><br></p>
+                        </div>
+                        <div class="box">
+                          <h2>solution 2</h2>
+                          <p>•   Developers can also use encoding techniques such as HTML encoding which is a technique to convert special character into their corresponding HTML entities. 
+                            This ensures that the user input is currently interpreted by the browser and does not execute any malicious scripts.<br><br></p>
+                        </div>
+                        <div class="box">
+                          <h2>solution 3</h2>
+                          <p>  •  Implementing Content Security Policies (CSPs) is another counter measure against stored XSS attacks, this restricts the types of scripts executed by a web page.
+                             CSPs allows developers to whitelist trusted scripts used by their own servers but blocks any scripts from untrusted sources <br><br></p>
+                        </div>
+                      </div>
+                      <p><br></p>
+                      <h2>Video explanation</h2>
+                      <div class="video">
+                        <video controls width="900" height="600"> <source src="Stored example 1ebaafc910b88e63eb483b48295c31cead0464331fec401a851e379516d821fc3.mp4"></video>
+                      </div>
+                      <p>To find a stored XSS vulnerability within a website, the first step is to locate a user input field. This can be a comment box, or a login field. (This is because malicious scripts need to be placed into an input box).
+
+Now we place the script tags in all the related fields, however if the submission does not work, we must alter the scripts so that they align with the rules of the input fields. Once all the fields have been completed and submitted, the script will then be stored on the server and will be activated once a user replies or interacts with it.</p>
+                      <a href="try.html" id="btn" style="display: block; text-align: center;">Try me</a>
+                
+    </div>
+
+    <footer>
+      <h2>Citations</h2>
+      <br>
+      <p>What is XSS: Stored cross site scripting example: Imperva (2023) Learning Center. Available at: https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/#:~:text=Stored%20XSS%2C%20also%20known%20as,application%2C%20onto%20a%20user%27s%20browser. (Accessed: 16 April 2023). </p>
+      <br>
+      <p>(No date) Aptive. Available at: https://www.aptive.co.uk/blog/xss-cross-site-scripting/ (Accessed: 19 April 2023). </p>
+      <br>
+      <p>(2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=XzjONZ5lKcw (Accessed: 20 April 2023). </p>
+    </footer>
+
+    <script src="script.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical hacking report</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">XSS</a>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="stored.html">Stored</a></li>
+            <li><a href="#" class="active">DOM</a></li>
+            <li><a href="blind.html">Blind</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon" >
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">DOM</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Cross site scripting - DOM</h2>
+        <p>DOM XSS is a type of security vulnerability that takes place in web applications. The attacker injects malicious code into the web page that is executed by the victim’s browser. This is an XSS type of attack which targets the client-side of an applicant, especially the Document Object Model (DOM) but not the server-side. 
+        <br> DOM is used for the representation of the web page’s structure, and it is influenced by JavaScript to make a dynamic and interactive web experience, but this flexibility is what makes it easy for attackers to manipulate it.</p>
+        <br>
+        <h3>Examples of DOM XSS: </h3>
+        <p>•	Changing the content of a webpage:
+            For example, the attacker changes the login button and makes you enter all your login details such as the username and the password to a fake login form.
+            Hacking someone’s email login details could give you access to change all their passwords by forgetting the password and changing it by the link sent to the email.<br>
+            •	Using an event handler:
+            The attacker uses event handler to inject malicious code. The attacker could add a mouseover event which will work when the victim hovers over the link, they would be taken to a different fake login page or steal the cookies of their session.
+            </p>
+            <br><br>
+        <h3>Different ways to prevent DOM XSS:</h3>.
+       
+        <div class="box-container">
+            <div class="box">
+                <h2>solution 1</h2>
+                <p>•	Sanitise user input<br>
+                    Use a library with a built-in sanitation feature to do the sanitation automatically so you do not need to worry about your code being vulnerable to any attacker.<br><br>
+               
+            </div>
+            <div class="box">
+                <h2>solution 2</h2>
+                <p>•	Use an XSS filter<br>
+                    This mechanism analyses the code and identifies any malicious code. This filter can remove or recode any malice from being executed by the browser. 
+                    The user can include it as an extension to the web browser or have it as part of the web application.</p><br><br></p>
+            </div>
+            <div class="box">
+                <h2>solution 3</h2>
+                <p>•	Limit use of JavaScript<br>
+                    This is the easiest way of preventing XSS attacks but if you do not have JavaScript in your application or web it won’t be very interactive for the user. 
+        </p>
+            </div>
+        </div>
+        <p><br></p>
+        <h2>Video explanation</h2>
+        <div class="video">
+          <video controls width="900" height="600"> <source src="DOM final example0f17c35a9d3aa278a0d6241f0429d3c35d7c8c3e398c2087b644395f3734d68e.mp4"></video>
+        </div>
+        <p>To find a DOM based XSS vulnerability within a website we need to first scope out the website. Once this is done, we need to find a user input field such as a comment box, or search bar. (This is because malicious scripts need to be placed into an input box). Now we must place the script into the input field, and all that is left to do is wait for a user to interact with the website.</p>
+    </div>
+
+    <footer>
+        <h2>Citations</h2>
+        <br>
+        <p>Cross site scripting (XSS) (no date) Cross Site Scripting (XSS) | OWASP Foundation. Available at: https://owasp.org/www-community/attacks/xss/ (Accessed: 20 March 2023).</p>
+        <br>
+        <p>What is dom-based XSS (cross-site scripting)? tutorial & examples: Web security academy (no date) What is DOM-based XSS (cross-site scripting)? Tutorial & Examples | Web Security Academy. Available at: https://portswigger.net/web-security/cross-site-scripting/dom-based (Accessed: 20 March 2023).</p>
+        <br>
+        <p>Acunetix (2022) How to prevent DOM-based cross-site scripting, Acunetix. Available at: https://www.acunetix.com/blog/web-security-zone/how-to-prevent-dom-based-cross-site-scripting/ (Accessed: 25 March 2023).</p>
+        <br>
+        <p>(2023) YouTube. Available at: https://youtu.be/hQEQ-KJh06M (Accessed: 12 March 2023).</p>
+        <br>
+        <p>(2022) YouTube. Available at: https://youtu.be/c9NNMunEGyc (Accessed: 13 March 2023).</p>
+    </footer>
+
+ 
+
+    <script src="script.js"></script>
+      
+</body>
+</html>
