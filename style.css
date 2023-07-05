@@ -159,6 +159,7 @@ section img#mountains_front {
   flex-direction: column;
   justify-content: space-between;
   background-color: #1c0522;
+  padding: 10%;
 }
 
 .box {
