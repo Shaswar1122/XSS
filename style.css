@@ -13,6 +13,9 @@ body {
   overflow-x: hidden;
   background: linear-gradient(#2b1055, #7597de);
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 header {
@@ -75,7 +78,7 @@ section::before {
   content: '';
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background: linear-gradient(to top, #1c0522, transparent);
   z-index: 1000;
@@ -204,6 +207,9 @@ footer {
 
   section {
     padding: 10% 5%;
+    overflow-x: hidden;
+    background: none; /* Remove the background gradient */
+    background-position: center top; /* Set the background position to center top */
   }
 
   #text {
@@ -216,10 +222,12 @@ footer {
 
   .sec {
     padding: 10% 5%;
+    background: #1c0522; /* Set the background color for sections */
   }
 
   .box-container {
     padding: 10%;
+    background-color: #1c0522; /* Set the background color for box-container */
   }
 }
 
@@ -231,6 +239,7 @@ footer {
 
   section {
     padding: 5% 10%;
+    overflow-x: hidden;
   }
 
   #text {
