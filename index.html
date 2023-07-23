@@ -9,8 +9,7 @@
     
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">XSS</a>
+    <header class="page-nav">
         <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="stored.html">Stored</a></li>
@@ -19,16 +18,16 @@
         </ul>
     </header>
     <section>
-        <img src="stars.png" id="stars">
-        <img src="moon.png" id="moon" >
-        <img src="mountains_behind.png" id="mountains_behind">
+        <img src="stars.png" data-preserve-aspect-ratio="xMidYMid slice"  id="stars">
+        <img src="moon.png"  data-preserve-aspect-ratio="xMidYMid slice" id="moon" >
+        <img src="mountains_behind.png"  data-preserve-aspect-ratio="xMidYMid slice" id="mountains_behind">
         <h2 id="text">XSS </h2>
         <a href="#sec" id="btn">Explore</a>
-        <img src="mountains_front.png" id="mountains_front">
+        <img src="mountains_front.png"  data-preserve-aspect-ratio="xMidYMid slice" id="mountains_front">
     </section>
 
     <div class="sec" id="sec">
-        <h2>What is a vulnerability?</h2>
+        <h2>What is a vulnerability ?</h2>
         <p>Before we delve into the explanation of cross site scripting, let’s take a look at 
             vulnerabilities and what they actually are. <br><br>
             A vulnerability is a weakness that attackers can use to exploit and gain unauthorised 
