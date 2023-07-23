@@ -41,13 +41,13 @@ header .logo {
 
 header ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-star;
   align-items: center;
 }
 
 header ul li {
   list-style: none;
-  margin-left: 20px;
+  /* margin: 2.5%; */
 }
 
 header ul li a {
@@ -197,12 +197,27 @@ footer {
   text-align: center;
 }
 
+.hero-image{
+  background-color: rgba(0, 128, 0, 0.3);
+  background-image: url(images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw 100vh;
+  z-index: 1;
+}
+
 /* Media Queries */
 
 /* Mobile Devices */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   header {
-    padding: 2% 2%;
+    padding: 2% 5%;
+  }
+   /* .page-nav ul {
+    flex-wrap: nowrap;
+  } */
+  .page-nav li {
+    flex: 1 1 25%;
   }
 
   section {
@@ -210,6 +225,7 @@ footer {
     overflow-x: hidden;
     background: none; /* Remove the background gradient */
     background-position: center top; /* Set the background position to center top */
+    background-attachment: fixed; /* Prevent the background from scrolling */
   }
 
   #text {
@@ -221,13 +237,19 @@ footer {
   }
 
   .sec {
-    padding: 10% 5%;
+    padding: 5% 5%;
     background: #1c0522; /* Set the background color for sections */
   }
-
+  .sec h2{
+    font-size: 2.8em;
+  }
   .box-container {
     padding: 10%;
     background-color: #1c0522; /* Set the background color for box-container */
+  }
+  .animation-container{
+    width: 100vw;
+    height: 100vh;
   }
 }
 
@@ -236,6 +258,11 @@ footer {
   header {
     padding: 2% 5%;
   }
+
+  header ul li {
+  list-style: none;
+  margin: 2.5%;
+}
 
   section {
     padding: 5% 10%;

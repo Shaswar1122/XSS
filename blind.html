@@ -9,8 +9,7 @@
     
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">XSS</a>
+    <header class="page-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="stored.html">Stored</a></li>
@@ -19,12 +18,12 @@
         </ul>
     </header>
     <section>
-        <img src="stars.png" id="stars">
-        <img src="moon.png" id="moon" >
-        <img src="mountains_behind.png" id="mountains_behind">
+        <img src="stars.png"  data-preserve-aspect-ratio="xMidYMid slice" id="stars">
+        <img src="moon.png"  data-preserve-aspect-ratio="xMidYMid slice" id="moon" >
+        <img src="mountains_behind.png"  data-preserve-aspect-ratio="xMidYMid slice" id="mountains_behind">
         <h2 id="text">Blind </h2>
         <a href="#sec" id="btn">Explore</a>
-        <img src="mountains_front.png" id="mountains_front">
+        <img src="mountains_front.png" data-preserve-aspect-ratio="xMidYMid slice"  id="mountains_front">
     </section>
 
     <div class="sec" id="sec">
